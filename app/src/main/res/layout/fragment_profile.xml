@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.panaceasoft.estatecore.fragments.ProfileFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/profile_background"
+        android:layout_marginBottom="@dimen/space_1"
+        android:orientation="vertical">
+        <!--android:background="@drawable/profile_background"-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="@dimen/space_2"
+        android:src="@drawable/ic_person_black"
+        android:id="@+id/iv_profile_photo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        app:border_width="1dp"
+        app:border_color="#e8e8e8"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorPrimaryDarkDeepOrange"
+        android:textSize="@dimen/caption"
+        android:layout_marginBottom="@dimen/space_2"
+
+         />
+
+
+    <TextView
+        android:id="@+id/tv_about_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/caption"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_2"
+        android:layout_marginLeft="@dimen/space_1"
+        android:layout_marginRight="@dimen/space_1"
+        />
+
+
+</LinearLayout>

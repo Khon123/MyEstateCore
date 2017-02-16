@@ -1,0 +1,158 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_1"
+                        android:layout_marginRight="@dimen/space_1"
+                        android:layout_marginTop="@dimen/space_1"
+                        android:layout_marginBottom="@dimen/space_1">
+                        <LinearLayout
+                            android:id="@+id/choose_container"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <include layout="@layout/ui_space"/>
+                    <LinearLayout
+                        android:id="@+id/number_select_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    </LinearLayout>
+                    <include layout="@layout/ui_space"/>
+                    <LinearLayout
+                        android:id="@+id/price_range_bar_container"
+                        android:layout_marginLeft="@dimen/space_1"
+                        android:layout_marginRight="@dimen/space_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/space_1"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:gravity="center_horizontal"
+                            android:text="@string/select_price_range"
+                            android:id="@+id/txt_price_range"
+                            android:textAlignment="center"
+                            android:textColor="@color/textColorSecondary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/meter_range_bar_container"
+                        android:layout_marginLeft="@dimen/space_1"
+                        android:layout_marginRight="@dimen/space_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/space_1"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:gravity="center_horizontal"
+                            android:text="@string/select_meter_range"
+                            android:id="@+id/txt_meter_range"
+                            android:textAlignment="center"
+                            android:textColor="@color/textColorSecondary" />
+                    </LinearLayout>
+                    <include layout="@layout/ui_space"/>
+                    <LinearLayout
+                        android:id="@+id/checkbox_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_1"
+                        android:layout_marginLeft="@dimen/space_1"
+                        android:layout_marginRight="@dimen/space_1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/cb_sell"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                            android:text="@string/for_sell"
+                            android:textColor="@color/textColorSecondary"/>
+
+                        <CheckBox
+
+                            android:layout_marginTop="@dimen/space_1"
+                            android:layout_marginBottom="@dimen/space_1"
+                            android:id="@+id/cb_rent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                            android:text="@string/for_rent"
+                            android:textColor="@color/textColorSecondary"/>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/ui_line"/>
+                    <include layout="@layout/ui_space"/>
+
+                    <Button
+                        android:textColor="@android:color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button_search"
+                        android:text="@string/search" />
+
+                    <include layout="@layout/ui_space"/>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

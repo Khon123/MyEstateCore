@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "908489897514",
+    "firebase_url": "https://estatecore-de35f.firebaseio.com",
+    "project_id": "estatecore-de35f",
+    "storage_bucket": "estatecore-de35f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908489897514:android:c4b184356a77f317",
+        "android_client_info": {
+          "package_name": "com.panaceasoft.estatecore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908489897514-ma4g652rus8peum3mt606ad8ai6r08iv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.panaceasoft.estatecore",
+            "certificate_hash": "F6011054A750E53AED959482A143BE229027992F"
+          }
+        },
+        {
+          "client_id": "908489897514-vqq0vilttugeejjjkeli06m9sn3qib5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc_IHK7Z73idrsQkRxjBpWEweSsCHl-CA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908489897514-vqq0vilttugeejjjkeli06m9sn3qib5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

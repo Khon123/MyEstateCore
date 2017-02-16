@@ -1,0 +1,443 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- Start For Keyword Search -->
+
+        <LinearLayout
+            android:id="@+id/selected_city_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_2"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/selected_city_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/search_city_label"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/search_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyword_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/search_keyword_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/search_keyword_label"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/search_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- End For Keyword Search -->
+
+        <!-- Start For Item Search -->
+
+        <!-- Selected Category Name -->
+        <LinearLayout
+            android:id="@+id/category_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/selected_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/selected_category_name"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- Total Rooms -->
+        <LinearLayout
+            android:id="@+id/total_rooms_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/total_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/total_rooms_count"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_total_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- Bed Rooms -->
+        <LinearLayout
+            android:id="@+id/bed_rooms_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/bed_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/bed_rooms_count"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_bed_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- Bath Rooms -->
+        <LinearLayout
+            android:id="@+id/bath_rooms_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/bath_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/bath_rooms_count"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_bath_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- Price Range -->
+        <LinearLayout
+            android:id="@+id/price_range_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/price_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/price_range"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_price_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- Meter Range -->
+        <LinearLayout
+            android:id="@+id/meter_range_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/meter_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/meter_range"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_meter_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <!-- For Sell/Rent -->
+
+        <LinearLayout
+            android:id="@+id/sell_rent_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/for_sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/for_sell_label"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_for_sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                android:text="No"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                android:text=" | "
+                />
+
+            <TextView
+                android:id="@+id/for_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/for_rent_label"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_for_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:textStyle="bold"
+                android:text="No"
+                />
+
+        </LinearLayout>
+
+        <!-- End For Item Search -->
+
+        <!-- Record Found -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_1"
+            android:paddingLeft="@dimen/space_1"
+            >
+
+            <TextView
+                android:id="@+id/record_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="@dimen/space_1"
+                android:paddingLeft="@dimen/space_1"
+                android:text="@string/search_result_count"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
